@@ -20,14 +20,15 @@ public class ObstacleMovement : MonoBehaviour
     }
 
     // Método que se llama automáticamente cuando el obstáculo colisiona con otro objeto
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision) // Usamos Collision para 3D
     {
         // Instanciar el efecto de explosión en la posición del obstáculo
-        Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+        if (explosionEffectPrefab != null) // Verifica que el prefab no sea nulo
+        {
+            Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+        }
 
         // Destruir el obstáculo después de la colisión
         Destroy(gameObject);
     }
 }
-
-
