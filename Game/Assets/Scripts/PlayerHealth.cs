@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; // Asegúrate de importar TextMesh Pro
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class PlayerHealth : MonoBehaviour
     [Header("Configuración de Daño")]
     public float damageAmount = 0.5f; // Daño normal al chocar
     public float damageMultiplierAbove40 = 2f; // Multiplicador de daño cuando la vida está por encima de 40
-    public float damageMultiplierAbove20 = 3f; // Multiplicador de daño cuando la vida está por encima de 20
+    public float damageMultiplierAbove20 = 3f; // Multiplicador de daño cuando la vida está por debajo de 20
+
+    [Header("Configuración de Game Over")]
+    public string gameOverSceneName = "gameover"; // Nombre de la escena de Game Over
 
     private void Start()
     {
@@ -20,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
         UpdateHealthUI(); // Actualiza la UI al iniciar
     }
 
-    // Método para reducir la vida al chocar con cualquier objeto
     private void OnCollisionEnter(Collision collision)
     {
         TakeDamage(); // Reduce vida al chocar con cualquier objeto
@@ -41,16 +44,22 @@ public class PlayerHealth : MonoBehaviour
         }
 
         currentHealth -= damageToApply; // Reduce la vida
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             currentHealth = 0; // Evita que la vida sea negativa
-            // Aquí podrías llamar a un método para manejar la muerte del jugador, si es necesario
+            GameOver(); // Llama al método de Game Over
         }
         UpdateHealthUI(); // Actualiza la UI después de recibir daño
     }
 
     void UpdateHealthUI()
     {
-        healthText.text = "HP: " + currentHealth.ToString("0"); // Actualiza el texto con la vida actual
+        healthText.text = "Vida: " + currentHealth.ToString("0"); // Actualiza el texto con la vida actual
+    }
+
+    void GameOver()
+    {
+        // Cambia a la escena de Game Over
+        SceneManager.LoadScene(gameOverSceneName); // Cambia a la escena usando el nombre proporcionado
     }
 }
