@@ -151,9 +151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ccc9e1a8dad00447957b9ebf791d7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 7635537821220425921, guid: 42b76fefc28381f4eafc40236b0916a5, type: 3}
+  obstaclePrefab: {fileID: 3933772126613442872, guid: 23800cca7f0ccb1459aab744f1598c73, type: 3}
   spawnPoint: {fileID: 62867043}
-  spawnInterval: 1
+  spawnInterval: 2
+  maxObstacles: 2
+  autoDestructionTime: 10
 --- !u!4 &62867043
 Transform:
   m_ObjectHideFlags: 0
@@ -941,6 +943,7 @@ MonoBehaviour:
   damageAmount: 5
   damageMultiplierAbove40: 10
   damageMultiplierAbove20: 15
+  gameOverSceneName: gameover
 --- !u!1001 &1437742795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1066,13 +1069,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316d6e3679ef2174a81034325e4a3329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 6401024152352264552, guid: 02bc30faf8e84904f95247dc36d86e0c, type: 3}
-  obstacleSpeed: 1
-  minY: -3
-  maxY: 3
-  spawnXPosition: 0
-  currentObstacle: {fileID: 0}
-  obstacleLifetime: 100
 --- !u!1001 &1818310801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1195,7 +1191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: axisOptions
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: handleRange

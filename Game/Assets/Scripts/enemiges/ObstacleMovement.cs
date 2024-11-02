@@ -5,13 +5,7 @@ using UnityEngine;
 public class ObstacleMovement : MonoBehaviour
 {
     public GameObject explosionEffectPrefab; // Prefab de la explosión
-    private float speed; // Velocidad del obstáculo
-
-    // Inicializar el obstáculo con la velocidad
-    public void Initialize(float obstacleSpeed)
-    {
-        speed = obstacleSpeed;
-    }
+    public float speed = 5f; // Velocidad del obstáculo, editable desde el Inspector
 
     void Update()
     {
