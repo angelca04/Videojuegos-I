@@ -54,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHealthUI()
     {
-        healthText.text = "Vida: " + currentHealth.ToString("0"); // Actualiza el texto con la vida actual
+        healthText.text = "HP" + currentHealth.ToString("0"); // Actualiza el texto con la vida actual
     }
 
     void GameOver()
