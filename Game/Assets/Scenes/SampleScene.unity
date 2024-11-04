@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4a25bd2ef5c27448d279cd7c5eaf2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 0.8
+  velocidad: 0.82
 --- !u!114 &450825421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 1080
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
@@ -419,7 +419,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 963194227}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -488,7 +488,7 @@ Transform:
   m_GameObject: {fileID: 669634551}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.02578, y: 1.398886, z: -0.5405498}
+  m_LocalPosition: {x: -2.02578, y: -0.045, z: -0.5405498}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -684,12 +684,12 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.03
   far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -996,7 +996,7 @@ Rigidbody:
     serializedVersion: 2
     m_Bits: 0
   m_ImplicitCom: 1
-  m_ImplicitTensor: 1
+  m_ImplicitTensor: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1042,6 +1042,18 @@ MonoBehaviour:
   damageMultiplierAbove40: 10
   damageMultiplierAbove20: 15
   gameOverSceneName: gameover
+--- !u!114 &1361563001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361562995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae2f86fed82a734897f05add5b29635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1437742795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1068,7 +1080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93c2269717815e6429805e0947bb68f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7208
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93c2269717815e6429805e0947bb68f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1122,6 +1134,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 93c2269717815e6429805e0947bb68f2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1361562999}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 93c2269717815e6429805e0947bb68f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1361563001}
   m_SourcePrefab: {fileID: 100100000, guid: 93c2269717815e6429805e0947bb68f2, type: 3}
 --- !u!1 &1608378281
 GameObject:
