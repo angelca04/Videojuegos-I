@@ -995,7 +995,7 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
+  m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1054,6 +1054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae2f86fed82a734897f05add5b29635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetSuperior: 0.5
 --- !u!1001 &1437742795
 PrefabInstance:
   m_ObjectHideFlags: 0
