@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6444318062628880643
+--- !u!1001 &3495495377802637392
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.56866
+      value: 162.89392
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.56866
+      value: 162.89392
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.56866
+      value: 162.89392
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.4925
+      value: 896.81
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.31297
+      value: -82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.09
+      value: -7275.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1c497be307199b342b14fdd3ff3862cf, type: 2}
     - target: {fileID: 919132149155446097, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
       propertyPath: m_Name
-      value: nave low poly 1
+      value: nave low poly 1 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -74,20 +74,23 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2280753892886716690}
+      addedObject: {fileID: 3736145834895300451}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4982133571090016740}
   m_SourcePrefab: {fileID: 100100000, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
---- !u!1 &6174356970291461202 stripped
+--- !u!1 &4342340129621216513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f70cb989aa9d9ee47a5737d000182003, type: 3}
-  m_PrefabInstance: {fileID: 6444318062628880643}
+  m_PrefabInstance: {fileID: 3495495377802637392}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2280753892886716690
+--- !u!65 &3736145834895300451
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6174356970291461202}
+  m_GameObject: {fileID: 4342340129621216513}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -100,5 +103,20 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.14, y: 1.65, z: 3.75}
-  m_Center: {x: 0.02, y: 0.07, z: -1.48}
+  m_Size: {x: 0.84, y: 0.86, z: 3.75}
+  m_Center: {x: -0.03, y: 0.07, z: -1.48}
+--- !u!114 &4982133571090016740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4342340129621216513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a33e8efe8ef0848b25a8f8f6e4ca65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 5
+  tiempoDesaparicion: 10
+  prefabExplosion: {fileID: 159918, guid: a0040bf7072bc2f4e82d887d50a9c5e2, type: 3}
