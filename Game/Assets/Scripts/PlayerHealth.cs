@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -12,15 +11,22 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Configuración de Daño")]
     public float damageAmount = 0.5f; // Daño normal al chocar
-    public float damageMultiplierAbove40 = 2f; // Multiplicador de daño cuando la vida está por encima de 40
+    public float damageMultiplierAbove40 = 2f; // Multiplicador de daño cuando la vida está entre 20 y 40
     public float damageMultiplierAbove20 = 3f; // Multiplicador de daño cuando la vida está por debajo de 20
 
     [Header("Configuración de Game Over")]
     public string gameOverSceneName = "gameover"; // Nombre de la escena de Game Over
 
+    [Header("Configuración de Sacudida")]
+    public float shakeDuration = 0.2f; // Duración del efecto de sacudida
+    public float shakeIntensity = 5f; // Intensidad del movimiento
+
+    private Vector3 originalPosition; // Posición original del texto
+
     private void Start()
     {
         currentHealth = maxHealth; // Inicializa la vida del jugador
+        originalPosition = healthText.rectTransform.localPosition; // Guarda la posición original del texto
         UpdateHealthUI(); // Actualiza la UI al iniciar
     }
 
@@ -54,7 +60,28 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHealthUI()
     {
-        healthText.text = "HP" + currentHealth.ToString("0"); // Actualiza el texto con la vida actual
+        healthText.text = "HP " + currentHealth.ToString("0"); // Actualiza el texto con la vida actual
+        StartCoroutine(ShakeText()); // Inicia la sacudida del texto
+    }
+
+    IEnumerator ShakeText()
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < shakeDuration)
+        {
+            // Genera una nueva posición aleatoria
+            Vector3 randomOffset = Random.insideUnitSphere * shakeIntensity;
+            randomOffset.z = 0; // Mantén el movimiento solo en 2D
+
+            healthText.rectTransform.localPosition = originalPosition + randomOffset;
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Vuelve a la posición original después de la sacudida
+        healthText.rectTransform.localPosition = originalPosition;
     }
 
     void GameOver()

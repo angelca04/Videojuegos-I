@@ -10,6 +10,6 @@ public class RestartButton : MonoBehaviour
     public void OnRestartButtonClicked()
     {
         // Cambia a la escena del juego
-        SceneManager.LoadScene("SampleScene"); // Asegúrate de que el nombre coincida exactamente
+        SceneManager.LoadScene("MiniGame"); // Asegúrate de que el nombre coincida exactamente
     }
 }
