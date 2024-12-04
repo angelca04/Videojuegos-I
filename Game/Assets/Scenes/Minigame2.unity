@@ -518,7 +518,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 194852206}
   spawnInterval: 2
   maxObstacles: 1
-  autoDestructionTime: 30
+  autoDestructionTime: 40
   spawnPositionVariance: 7
 --- !u!4 &194852206
 Transform:
@@ -529,7 +529,7 @@ Transform:
   m_GameObject: {fileID: 194852204}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7066366, z: -0, w: 0.70757675}
-  m_LocalPosition: {x: 2361, y: 230, z: 677}
+  m_LocalPosition: {x: 2907, y: -654, z: 676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
