@@ -1759,6 +1759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 396285490}
   levelTime: 30
+  nextSceneName: Wins
 --- !u!4 &1269386178
 Transform:
   m_ObjectHideFlags: 0
