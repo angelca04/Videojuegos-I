@@ -495,27 +495,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalScale.x
-      value: 23000
+      value: 17309.656
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalScale.y
-      value: 23000
+      value: 17309.656
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalScale.z
-      value: 23000
+      value: 17309.656
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -843
+      value: -853.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -428
+      value: -346
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 763
+      value: 763.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalRotation.w
@@ -850,8 +850,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 355095122}
   spawnInterval: 2
   maxObstacles: 1
-  autoDestructionTime: 5
-  spawnPositionVariance: 2
+  autoDestructionTime: 13
+  spawnPositionVariance: 5
 --- !u!4 &355095122
 Transform:
   m_ObjectHideFlags: 0
@@ -861,7 +861,7 @@ Transform:
   m_GameObject: {fileID: 355095120}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7066366, z: -0, w: 0.70757675}
-  m_LocalPosition: {x: 1986, y: -474, z: 677}
+  m_LocalPosition: {x: 1986, y: -510, z: 677}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1892,7 +1892,7 @@ MonoBehaviour:
   timerText: {fileID: 396285490}
   levelCompletePanel: {fileID: 1492765350}
   completionSound: {fileID: 8300000, guid: d044967fdf81b7d4abeeae18621e6aa8, type: 3}
-  levelTime: 5
+  levelTime: 35
 --- !u!4 &1269386178
 Transform:
   m_ObjectHideFlags: 0
@@ -2819,7 +2819,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 2133610863}
   spawnInterval: 2
   maxObstacles: 1
-  autoDestructionTime: 15
+  autoDestructionTime: 20
   spawnPositionVariance: 5
 --- !u!4 &2133610863
 Transform:

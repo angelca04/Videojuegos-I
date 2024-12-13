@@ -36,7 +36,7 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 
     private Canvas canvas;
     private Camera cam;
-    private Vector2 input = Vector2.zero;
+    private Vector2 input = Vector2.down; // Dirección inicial hacia abajo
 
     protected virtual void Start()
     {
@@ -52,12 +52,16 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         handle.anchorMin = center;
         handle.anchorMax = center;
         handle.pivot = center;
-        handle.anchoredPosition = Vector2.zero;
+
+        // Coloca el handle visualmente hacia abajo
+        Vector2 radius = background.sizeDelta / 2;
+        handle.anchoredPosition = Vector2.down * radius.y * handleRange;
     }
 
     public virtual void OnPointerDown(PointerEventData eventData)
     {
-        OnDrag(eventData);
+        input = Vector2.zero; // Reinicia el input al tocar
+        OnDrag(eventData);    // Actualiza según el arrastre
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -85,7 +89,6 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
             input = new Vector2(input.x, 0f);
         else if (axisOptions == AxisOptions.Vertical)
             input = new Vector2(0f, input.y);
-        // No se aplica ninguna restricción si AxisOptions es Both
     }
 
     private float SnapFloat(float value, AxisOptions snapAxis)
@@ -102,8 +105,8 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 
     public virtual void OnPointerUp(PointerEventData eventData)
     {
-        input = Vector2.zero;
-        handle.anchoredPosition = Vector2.zero;
+        input = Vector2.down; // Regresa a la posición inicial hacia abajo
+        handle.anchoredPosition = Vector2.down * (background.sizeDelta.y / 2) * handleRange;
     }
 
     protected Vector2 ScreenPointToAnchoredPosition(Vector2 screenPosition)

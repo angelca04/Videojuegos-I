@@ -529,7 +529,7 @@ Transform:
   m_GameObject: {fileID: 194852204}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7066366, z: -0, w: 0.70757675}
-  m_LocalPosition: {x: 3153, y: -483, z: 676}
+  m_LocalPosition: {x: 3153, y: -814, z: 676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -679,27 +679,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalScale.x
-      value: 19097.129
+      value: 16719.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalScale.y
-      value: 19097.129
+      value: 16719.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalScale.z
-      value: 19097.129
+      value: 16719.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -850.3
+      value: -854.74
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -371.75
+      value: -337.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 763.03
+      value: 763.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e314dcc1ee1dfb40ad60cb1898ae280, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1963,7 +1963,7 @@ MonoBehaviour:
   timerText: {fileID: 215308019}
   levelCompletePanel: {fileID: 860919821}
   completionSound: {fileID: 8300000, guid: d044967fdf81b7d4abeeae18621e6aa8, type: 3}
-  levelTime: 10
+  levelTime: 40
 --- !u!4 &1030711436
 Transform:
   m_ObjectHideFlags: 0
