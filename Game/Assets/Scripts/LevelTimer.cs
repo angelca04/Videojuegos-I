@@ -1,20 +1,27 @@
 using UnityEngine;
-using TMPro;
+using TMPro; // Necesario para TextMeshPro.
 
 public class LevelTimer : MonoBehaviour
 {
-    public TextMeshProUGUI timerText; // Texto para mostrar el tiempo (TextMeshPro).
+    public TextMeshProUGUI timerText; // Campo para el texto del temporizador.
     public GameObject levelCompletePanel; // Panel de "Bien Hecho".
-
+    public AudioClip completionSound; // Sonido al completar el nivel.
     public float levelTime = 120f; // Tiempo total en segundos.
+
     private float currentTime;
     private bool isRunning = true;
+    private AudioSource audioSource;
 
     void Start()
     {
         currentTime = levelTime;
-        UpdateTimerUI();
+        UpdateTimerUI(); // Actualiza el texto del temporizador al inicio.
         levelCompletePanel.SetActive(false); // Asegura que el panel esté oculto al iniciar.
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>(); // Añade un AudioSource si no existe.
+        }
     }
 
     void Update()
@@ -28,7 +35,7 @@ public class LevelTimer : MonoBehaviour
                 isRunning = false;
                 ShowLevelCompletePanel(); // Muestra el panel cuando se acaba el tiempo.
             }
-            UpdateTimerUI();
+            UpdateTimerUI(); // Actualiza el texto del temporizador cada frame.
         }
     }
 
@@ -43,6 +50,12 @@ public class LevelTimer : MonoBehaviour
     {
         levelCompletePanel.SetActive(true); // Muestra el panel.
         Time.timeScale = 0f; // Pausa el juego.
+
+        // Reproducir el sonido de finalización si está configurado.
+        if (completionSound != null)
+        {
+            audioSource.PlayOneShot(completionSound);
+        }
     }
 
     // Métodos para los botones:
@@ -52,16 +65,9 @@ public class LevelTimer : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
-    public void GoToMainMenu()
+    public void SelectLevel()
     {
         Time.timeScale = 1f; // Restaura el tiempo.
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu"); // Cambia "MainMenu" por el nombre de tu escena principal.
-    }
-
-    public void NextLevel()
-    {
-        Time.timeScale = 1f; // Restaura el tiempo.
-        Debug.Log("¡Cargar siguiente nivel!"); // Aquí implementas la lógica para cargar el siguiente nivel.
-        // Por ejemplo: SceneManager.LoadScene("NextLevel");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("selectnivel"); // Cambia "LevelSelection" por el nombre de tu escena de selección de nivel.
     }
 }
